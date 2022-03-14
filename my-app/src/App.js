@@ -5,7 +5,8 @@ import './App.css';
 function App() {
   return (
     <>
-    <Navbar title='BLOGS' name='Saransh'/>
+    {/* <Navbar title='BLOGS' name="Saransh"/> */}
+    <Navbar/>
     </>
   );
 }

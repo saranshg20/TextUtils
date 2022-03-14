@@ -1,5 +1,5 @@
 import React from 'react'
-
+import PropTypes from 'prop-types'
 export default function Navbar(props) {
   return (
     <>
@@ -30,4 +30,14 @@ export default function Navbar(props) {
 </>
 
   )
+}
+
+Navbar.propTypes = {
+  title: PropTypes.string,
+  name: PropTypes.string
+}
+
+Navbar.defaultProps = {
+  title: 'Set title here',
+  name: 'Unknown'
 }
