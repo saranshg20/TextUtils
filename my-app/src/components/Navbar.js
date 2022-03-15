@@ -26,7 +26,6 @@ export default function Navbar(props) {
     </div>
   </div>
 </nav> 
-<h1>Hello {props.name}!!</h1>
 </>
 
   )
