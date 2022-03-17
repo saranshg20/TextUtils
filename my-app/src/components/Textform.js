@@ -29,7 +29,7 @@ export default function Textform(props) {
     // setText("New Text");
     return (
         <>
-            <div className="container">
+            <div className={`container text-${props.mode==='light'?'dark':'light'}`}>
                 <h4>{props.heading}</h4>
                 <div className="mb-3">
                     <textarea className="form-control" value={text} onChange={handleOnChange} id="exampleFormControlTextarea1" rows="8"></textarea>
@@ -38,7 +38,7 @@ export default function Textform(props) {
                 <button className='btn btn-primary mx-2' onClick={handleLoClick}>Convert to LowerCase</button>
                 <button className='btn btn-primary mx-2' onClick={handleClearClick}>Clear Text</button>
             </div>
-            <div className="container my-3">
+            <div className={`container my-3 text-${props.mode==='light'?'dark':'light'}`}>
                 <h4>Text Summary</h4>
                 <p>Text has {text.length} characters and {text.split(" ").length} words</p>
                 <p>Reading time around {0.008 * (text.split(" ").length)} minutes.</p>
