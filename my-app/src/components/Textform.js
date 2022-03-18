@@ -40,7 +40,7 @@ export default function Textform(props) {
             </div>
             <div className={`container my-3 text-${props.mode==='light'?'dark':'light'}`}>
                 <h4>Text Summary</h4>
-                <p>Text has {text.length} characters and {(text.split(" ").length===1)?0:text.split(" ").length} words</p>
+                <p>Text has {text.length} characters and {(text.split(" ").filter((element)=>{return element.length!==0}).length)} words</p>
                 <p>Reading time around {(text.split(" ").length===1)?0:text.split(" ").length*0.008} minutes.</p>
                 <h4>Preview</h4>
                 <p>{text}</p>
